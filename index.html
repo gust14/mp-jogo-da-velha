@@ -16,12 +16,67 @@
 </head>
 
 <body>
+  <div class="modal">
+    <div class="modal-content">
+      <h2>Bem-vindo ao jogo da velha!</h2>
+      <button class="close-modal">Fechar</button>
+    </div>
+  </div>
+      
   <main class="container-main">
-    <!-- ESTRUTURE O SEU HTML AQUI -->
+    
+    <div class="jogo">
+      <div class="tabuleiro">
+        <div class="linha">
+          <div class="celula" id="celula-1"></div>
+          <div class="celula" id="celula-2"></div>
+          <div class="celula" id="celula-3"></div>
+        </div>
+        <div class="linha">
+          <div class="celula" id="celula-4"></div>
+          <div class="celula" id="celula-5"></div>
+          <div class="celula" id="celula-6"></div>
+        </div>
+        <div class="linha">
+          <div class="celula" id="celula-7"></div>
+          <div class="celula" id="celula-8"></div>
+          <div class="celula" id="celula-9"></div>
+        </div>
+      </div>
+      <div class="controle">
+        <button id="btn-reiniciar">Reiniciar</button>
+        
+        <div class="placar">
+          <div class="placar-item">
+            <span id="placar-x">[X]= 0</span>
+          </div>
+          <div class="placar-item">
+            <span id="placar-o">[O]= 0</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   <div class="overlay"></div>
+  <!-- Modal de vitória -->
+<div class="modal-vitoria" id="modal-vitoria">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Placar!</h2>
+    </div>
+    <div class="modal-body">
+      <i class="fas fa-trophy"></i>
+      <p id="mensagem-vitoria"></p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" id="btn-fechar-modal">Fechar</button>
+    </div>
+  </div>
+</div>
 
-  <script type="module" src="./scripts/main.js"></script>
+  
+  <script defer src="./scripts/main.js"></script>
+
 </body>
 
 </html>
